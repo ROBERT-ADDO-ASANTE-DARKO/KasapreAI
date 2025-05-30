@@ -1,4 +1,3 @@
-```markdown
 # 🌍 Kasasua - Multilingual Communication Suite for Students
 
 Kasasua is an AI-powered multilingual communication suite featuring:
@@ -30,7 +29,7 @@ Kasasua is an AI-powered multilingual communication suite featuring:
 - Tesseract OCR (for EasyOCR)
 - FFmpeg (for audio processing)
 
-```bash
+```
 # Clone repository
 git clone https://github.com/ROBERT-ADDO-ASANTE-DARKO/Kasasua.git
 cd polyglot/backend
