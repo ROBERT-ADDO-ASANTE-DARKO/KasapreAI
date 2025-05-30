@@ -32,7 +32,7 @@ Kasasua is an AI-powered multilingual communication suite featuring:
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/polyglot.git
+git clone https://github.com/ROBERT-ADDO-ASANTE-DARKO/Kasasua.git
 cd polyglot/backend
 
 # Install dependencies
