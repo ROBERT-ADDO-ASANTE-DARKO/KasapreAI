@@ -53,7 +53,7 @@ DATABASE_URL=sqlite:///./polyglot.db
 
 ## 🏃 Running the Application
 
-```bash
+```
 # Development
 PYTHONPATH=. uvicorn app.main:app --reload
 
@@ -96,7 +96,7 @@ polyglot/
 ```
 
 ### Creating Migrations
-```bash
+```
 alembic revision --autogenerate -m "description"
 alembic upgrade head
 ```
@@ -114,7 +114,7 @@ RUN pip install -r requirements.txt
 CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "app.main:app"]
 ```
 
-```bash
+```
 docker build -t kasasua .
 docker run -p 8000:8000 kasasua
 ```
