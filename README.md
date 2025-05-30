@@ -1,10 +1,6 @@
 ```markdown
 # 🌍 Kasasua - Multilingual Communication Suite for Students
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/Framework-FastAPI-green)](https://fastapi.tiangolo.com)
-[![License](https://img.shields.io/badge/License-MIT-purple)](LICENSE)
-
 Kasasua is an AI-powered multilingual communication suite featuring:
 - 🎤 Audio transcription with Whisper
 - 📄 Image text extraction with EasyOCR
@@ -119,8 +115,8 @@ CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "app.main:app"]
 ```
 
 ```bash
-docker build -t polyglot .
-docker run -p 8000:8000 polyglot
+docker build -t kasasua .
+docker run -p 8000:8000 kasasua
 ```
 
 ### Kubernetes (Helm)
@@ -137,12 +133,6 @@ See `deploy/` directory for sample Helm charts.
 ## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## ✉️ Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - youremail@example.com
-
-Project Link: [https://github.com/yourusername/polyglot](https://github.com/yourusername/polyglot)
 ```
 
 ## Key Sections Included:
