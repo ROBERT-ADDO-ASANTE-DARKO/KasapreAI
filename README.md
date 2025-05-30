@@ -1,2 +1,2 @@
-# KasapreAI
-Kasapre AI backend with multilingual support
+# Kasasua
+Kasasua backend with multilingual support
