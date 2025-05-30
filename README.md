@@ -132,7 +132,7 @@ See `deploy/` directory for sample Helm charts.
 ## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-```
+
 
 ## Key Sections Included:
 
