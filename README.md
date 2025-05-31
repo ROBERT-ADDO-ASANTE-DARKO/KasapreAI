@@ -45,9 +45,9 @@ sudo apt-get install tesseract-ocr ffmpeg
 
 Create `.env` file:
 ```ini
-DATABASE_URL=sqlite:///./polyglot.db
+DATABASE_URL=sqlite:///./kasasua.db
 # For production:
-# DATABASE_URL=postgresql://user:password@localhost:5432/polyglot
+# DATABASE_URL=postgresql://user:password@localhost:5432/kasasua
 ```
 
 ## 🏃 Running the Application
