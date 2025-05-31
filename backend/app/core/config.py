@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List, Dict
 
 from pydantic_settings import BaseSettings#, AnyUrl, validator
 from pydantic import AnyUrl, validator
@@ -8,12 +8,12 @@ from pydantic import AnyUrl, validator
 
 class Settings(BaseSettings):
     # Application Config
-    APP_NAME: str = "Polyglot API"
+    APP_NAME: str = "Kasasua API"
     DEBUG: bool = False
     API_V1_STR: str = "/api/v1"
     
     # Database Config (SQLite)
-    DATABASE_URL: str = "sqlite:///./polyglot.db"
+    DATABASE_URL: str = "sqlite:///./kasasua.db"
     SYNC_DATABASE_URL: Optional[str] = None
     
     # SQLite-specific settings
@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     WHISPER_MODEL: str = "base"  # Possible values: tiny, base, small, medium, large
     
     # OCR Config
-    OCR_DEFAULT_LANGUAGES: list[str] = ["en"]
+    OCR_DEFAULT_LANGUAGES: List[str] = ["en"]
     
     # File Storage
     UPLOAD_DIR: Path = Path("uploads")
@@ -38,13 +38,13 @@ class Settings(BaseSettings):
         env_file = ".env"
     
     @validator("DATABASE_URL", pre=True)
-    def set_sqlite_database_url(cls, v: Optional[str], values: dict[str, any]) -> str:
+    def set_sqlite_database_url(cls, v: Optional[str], values: Dict[str, any]) -> str:
         if v is not None:
             return v
-        return f"sqlite:///{values.get('SQLITE_DB_PATH', 'polyglot.db')}"
+        return f"sqlite:///{values.get('SQLITE_DB_PATH', 'kasasua.db')}"
     
     @validator("SYNC_DATABASE_URL", pre=True)
-    def set_sync_database_url(cls, v: Optional[str], values: dict[str, any]) -> str:
+    def set_sync_database_url(cls, v: Optional[str], values: Dict[str, any]) -> str:
         if v is not None:
             return v
         return values["DATABASE_URL"].replace("sqlite:///", "sqlite:///")

@@ -2,11 +2,11 @@ import easyocr
 import base64
 import cv2
 import numpy as np
-from typing import Dict, Any
+from typing import Dict, Any, List
 from ..schemas.ocr import OCRResult
 
 class OCRService:
-    def __init__(self, languages: list = ['en']):
+    def __init__(self, languages: List = ['en']):
         self.reader = easyocr.Reader(languages)
 
     def extract_text(self, image_path: str) -> OCRResult:
