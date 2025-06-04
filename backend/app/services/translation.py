@@ -1,5 +1,5 @@
-from googletrans import Translator
-from googletrans.models import Translated
+#from googletrans import Translator
+#from googletrans.models import Translated
 from typing import Optional
 from ..schemas.translation import TranslationResult
 from deep_translator import GoogleTranslator
