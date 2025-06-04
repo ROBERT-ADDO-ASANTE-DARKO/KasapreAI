@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from .api.v1.router import router as api_router
-from app.api.v1.endpoints import transcription, ocr, translation
+from app.api.v1.endpoints import transcription, ocr, translation, tts
 
 app = FastAPI(generate_unique_id_function=lambda route: f"{route.tags[0]}_{route.name}")
 
@@ -40,4 +40,10 @@ app.include_router(
     translation.router,
     prefix="/api/v1/translation",
     tags=["Text Translation"]
+)
+
+app.include_router(
+    tts.router,
+    prefix="/api/v1/tts",
+    tags=["Text-to-Speech"]
 )
